@@ -1470,7 +1470,7 @@ static BOOL isRunningiOS10_3OrAbove() {
       [self fhv_accumulatorDidChange];
     }
   };
-  if (wasTrackingScrollView) {
+  if (wasTrackingScrollView && !_sharedWithManyScrollViews) {
     [UIView animateWithDuration:kTrackingScrollViewDidChangeAnimationDuration
                      animations:animate
                      completion:completion];
